@@ -4,8 +4,8 @@ from PIL import Image
 import time
 
 while True :
-    os.system('adb shell screencap /sdcard/screen.png')
-    os.system('adb pull /sdcard/screen.png')
+    temp = os.system('adb shell screencap /sdcard/screen.png')
+    temp = os.system('adb pull /sdcard/screen.png')
 
     image = Image.open('screen.png')
     image = numpy.array(image, dtype=numpy.uint8)
